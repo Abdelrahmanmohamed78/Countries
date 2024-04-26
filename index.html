@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tages -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Simple Countries Project Using API - SASS - HTML - Bootstrap - JS">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <!-- Font Awesome File -->
+    <!-- Font awesome Links -->
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome" href="/css/app-wa-a60ddbceb7292f11c9e430d067b1eb9f.css?vsn=d">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css">
+    <!-- Bootstrap & Scss style Files -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap.css.map">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Countires</title>
+  </head>
+  <body>
+    <!-- Start Header -->
+    <header class="header">
+      <div class="container d-flex justify-content-between align-items-center">
+        <h3 class="mb-0">Where in the world?</h3>
+        <button class="dark-mode light d-flex align-items-center gap-2">
+          <i class="fa-regular fa-moon"></i>
+          Dark Mode
+        </button>
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Main Page -->
+    <main>
+      <div class="container">
+        <div class="filter d-flex flex-column flex-md-row justify-content-md-between align-items-md-center gap-5">
+          <form action="" class="d-flex align-items-center rounded overflow-hidden main-shadow">
+            <i class="fa-solid fa-magnifying-glass "></i>
+            <input class="fs-14 border-0 ps-4 pe-4 pt-3 pb-3" type="text" placeholder="search for a country...">
+          </form>
+          <div class="filter-box position-relative d-flex align-items-center justify-content-between rounded">
+            <ul class="select-counrty position-absolute p-3 rounded w-100">
+              <li>Africa</li>
+              <li>Americas</li>
+              <li>Asia</li>
+              <li>Europe</li>
+              <li>Oceania</li>
+            </ul>
+            <p class="mb-0">Filter by Region</p>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+        </div>
+        <section class="countries pt-5 pb-5 d-grid"></section>
+      </div>
+    </main>
+    <!-- End Main Page -->
+    <!-- Bootsrtap & Main Script Files -->
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/bootstrap.bundle.min.js.map"></script>
+    <script src="JS/main.js"></script>
+  </body>
+</html>

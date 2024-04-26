@@ -1,0 +1,242 @@
+/* Start Global Rules */
+:root {
+  --text-color: hsl(200, 15%, 8%);
+  --input-color: hsl(0, 0%, 52%);
+  --bg-color: hsl(0, 0%, 98%);
+  --element-color: hsl(0, 0%, 100%);
+  --main-shadow: 0 0 10px 4px #eee;
+  --main-transition: 0.4s;
+}
+
+:root#dark {
+  --text-color: hsl(200, 15%, 92%);
+  --input-color: hsl(0, 0%, 80%);
+  --bg-color: hsl(207, 26%, 17%);
+  --element-color: hsl(209, 23%, 22%);
+  --main-shadow: 0 0 10px 4px #23222278;
+  --main-transition: 0.4s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-color);
+}
+
+.fs-14, .country-infomation .container .country-details .details .country-border ul li, .country-infomation .container .country-details .details .links ul li {
+  font-size: 14px;
+}
+
+.country-infomation .container .country-details .details .country-border ul li, .country-infomation .container a.back, main .countries .product, main .filter .filter-box, main .filter form {
+  -webkit-box-shadow: var(--main-shadow);
+          box-shadow: var(--main-shadow);
+}
+
+/* End Global Rules */
+/* Start Header */
+header {
+  background-color: var(--element-color);
+  -webkit-box-shadow: 0 -2px 5px 0px var(--dark-element);
+          box-shadow: 0 -2px 5px 0px var(--dark-element);
+}
+header .container {
+  min-height: 80px;
+}
+header .container h3 {
+  font-size: 25px;
+  font-weight: 800;
+}
+@media (max-width: 767px) {
+  header .container h3 {
+    font-size: 18px;
+  }
+}
+header .container button {
+  padding: 8px 12px;
+  border-radius: 50px;
+  border: 2px solid var(--text-color);
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+/* End Header */
+/* Start Main */
+main {
+  padding: 60px 0;
+}
+main .filter form {
+  color: var(--input-color);
+  background-color: var(--element-color);
+  padding-left: 20px;
+}
+main .filter form input {
+  width: 400px;
+  background-color: transparent;
+  outline: none;
+  color: inherit;
+}
+main .filter form i {
+  cursor: pointer;
+}
+main .filter .filter-box {
+  width: 250px;
+  font-size: 14px;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+main .filter .filter-box p {
+  font-size: 15px;
+  font-weight: 500;
+}
+main .filter .filter-box i {
+  font-size: 13px;
+  -webkit-transition: var(--main-transition);
+  transition: var(--main-transition);
+}
+main .filter .filter-box i.close {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+main .filter .filter-box .select-counrty {
+  display: none;
+  top: calc(100% + 8px);
+  left: 0;
+  background-color: var(--element-color);
+  font-weight: 600;
+}
+main .filter .filter-box .select-counrty.show {
+  display: block;
+}
+main .filter .filter-box li:not(:last-child) {
+  padding-bottom: 10px;
+}
+main .countries {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 80px;
+}
+@media (max-width: 768px) {
+  main .countries {
+    gap: 40px;
+  }
+}
+main .countries .product {
+  background-color: var(--element-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+main .countries .product.hide {
+  display: none;
+}
+main .countries .product .image {
+  height: 150px;
+}
+main .countries .product .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .countries .product .info {
+  padding: 20px 20px 40px;
+}
+main .countries .product .info a {
+  color: var(--text-color);
+}
+main .countries .product .info a h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 800;
+}
+main .countries .product .info ul li {
+  font-size: 15px;
+}
+main .countries .product .info ul li:not(:last-child) {
+  padding-bottom: 10px;
+}
+main .countries .product .info ul li span {
+  font-weight: 700;
+}
+
+.country-infomation .container .country-details .details .country-border ul li:hover, .country-infomation .container a.back {
+  -webkit-transition: var(--main-transition);
+  transition: var(--main-transition);
+}
+.country-infomation .container .country-details .details .country-border ul li:hover, .country-infomation .container a.back:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+/* End Main */
+/* Start Country Infomation Sec */
+.country-infomation {
+  padding: 60px 0;
+}
+.country-infomation .container a.back {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--element-color);
+  color: var(--text-color);
+  padding: 8px 30px;
+  border-radius: 5px;
+  border: none;
+}
+.country-infomation .container .country-details {
+  padding: 60px 0;
+}
+.country-infomation .container .country-details .image {
+  height: 360px;
+}
+.country-infomation .container .country-details .image img {
+  width: 100%;
+  height: 100%;
+}
+.country-infomation .container .country-details .details .links ul li {
+  color: var(--input-color);
+}
+.country-infomation .container .country-details .details .links ul li p {
+  color: var(--text-color);
+  font-weight: bold;
+}
+.country-infomation .container .country-details .details .links ul li p span {
+  color: var(--input-color);
+  font-weight: normal;
+}
+.country-infomation .container .country-details .details .country-border ul li {
+  padding: 5px 25px;
+  border-radius: 5px;
+  background-color: var(--element-color);
+  -webkit-transition: var(--main-transition);
+  transition: var(--main-transition);
+}
+/* End Country Infomation Sec */
